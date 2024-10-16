@@ -7,7 +7,7 @@ export const GetAllBrands = async (): Promise<IBrand[]> => {
         const response = await instance.get('/brands');
         return response.data;
     } catch (error) {
-        console.error('Error fetching brands:', error);
+        console.error( error);
         throw error;
     }
 };
@@ -18,7 +18,7 @@ export const CreateBrand = async (name: string): Promise<IBrand> => {
         const response = await instance.post('/brands', { name });
         return response.data;
     } catch (error) {
-        console.error('Error creating brand:', error);
+        console.error( error);
         throw error;
     }
 };

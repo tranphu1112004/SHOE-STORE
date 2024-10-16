@@ -6,7 +6,6 @@ type Props = {
     children: React.ReactNode;
 };
 
-// Define the context type
 interface ISizeContext {
     sizes: ISize[];
     onAddSize: (name: string) => Promise<void>;
@@ -14,7 +13,6 @@ interface ISizeContext {
     onDeleteSize: (id: string) => Promise<void>;
 }
 
-// Create the context with the default value
 export const SizeCT = createContext<ISizeContext | undefined>(undefined);
 
 const SizeContext: React.FC<Props> = ({ children }) => {

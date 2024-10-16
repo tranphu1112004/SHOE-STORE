@@ -1,9 +1,7 @@
-// BrandContext.tsx
 import React, { createContext, useEffect, useState } from 'react';
 import { IBrand } from '../interfaces/IProduct';
 import { CreateBrand, DeleteBrand, GetAllBrands, UpdateBrand } from '../service/Brand';
 
-// Define the type for BrandContext
 interface IBrandContext {
     brands: IBrand[];
     deleteBrand: (id: string) => Promise<void>;
@@ -15,7 +13,6 @@ type Props = {
     children: React.ReactNode;
 };
 
-// Initialize the context with the proper type
 export const BrandCT = createContext<IBrandContext | undefined>(undefined);
 
 const BrandContext: React.FC<Props> = ({ children }) => {

@@ -6,7 +6,6 @@ type Props = {
     children: ReactNode;
 };
 
-// Định nghĩa kiểu dữ liệu cho context
 interface IVoucherContext {
     vouchers: IVoucher[];
     onAddVoucher: (code: string, discountPercentage: number, minimumSpend: number, expiryDate: string, isActive: boolean) => Promise<void>;
@@ -14,10 +13,8 @@ interface IVoucherContext {
     onDeleteVoucher: (id: string) => Promise<void>;
 }
 
-// Tạo context với giá trị mặc định
 const VoucherContext = createContext<IVoucherContext | undefined>(undefined);
 
-// Hook để sử dụng context
 export const useVoucherContext = () => {
     const context = useContext(VoucherContext);
     if (!context) {
@@ -40,7 +37,6 @@ const VoucherProvider: React.FC<Props> = ({ children }) => {
         })();
     }, []);
 
-    // Thêm voucher mới
     const onAddVoucher = async (code: string, discountPercentage: number, minimumSpend: number, expiryDate: string, isActive: boolean) => {
         try {
             const newVoucher = await CreateVoucher({ code, discountPercentage, minimumSpend, expiryDate, isActive });
@@ -52,7 +48,6 @@ const VoucherProvider: React.FC<Props> = ({ children }) => {
         }
     };
 
-    // Cập nhật voucher
     const onUpdateVoucher = async (id: string, code: string, discountPercentage: number, minimumSpend: number, expiryDate: string, isActive: boolean) => {
         try {
             const updatedVoucher = await UpdateVoucher(id, { code, discountPercentage, minimumSpend, expiryDate, isActive });
@@ -64,7 +59,6 @@ const VoucherProvider: React.FC<Props> = ({ children }) => {
         }
     };
 
-    // Xóa voucher
     const onDeleteVoucher = async (id: string) => {
         try {
             await DeleteVoucher(id);
@@ -83,4 +77,4 @@ const VoucherProvider: React.FC<Props> = ({ children }) => {
     );
 };
 
-export default VoucherProvider; // Xuất VoucherProvider thay vì VoucherContext
+export default VoucherProvider; 

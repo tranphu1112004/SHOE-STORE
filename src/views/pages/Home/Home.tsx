@@ -2,8 +2,9 @@ import React, { useRef } from 'react';
 import CustomSlider from './CustomSlider';
 import BestSale from './BestSale';
 import NewProduct from './NewProduct';
-import BestProducts from './bestSellingProducts';
+import BestSellingProducts from './bestSellingProducts';
 import Trending from './Trending';
+import Product from './Product';
 
 const Home = () => {
   const bestProductsRef = useRef<HTMLDivElement>(null);
@@ -25,9 +26,10 @@ const Home = () => {
         <BestSale scrollToBestProducts={handleScrollToBestProducts} />
         <Trending />
         <div ref={bestProductsRef}>
-          <BestProducts />
+          <BestSellingProducts />
         </div>
         <NewProduct />
+        <Product/>
       </div>
     </div>
   );

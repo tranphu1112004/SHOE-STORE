@@ -7,7 +7,7 @@ export const GetAllCategories = async (): Promise<ICategory[]> => {
         const response = await instance.get(`/categories`);
         return response.data;
     } catch (error) {
-        console.error('Lỗi khi lấy danh sách danh mục:', error);
+        console.error( error);
         throw error;
     }
 };
@@ -18,7 +18,7 @@ export const CreateCategory = async (name: string): Promise<ICategory> => {
         const response = await instance.post(`/categories`, { name });
         return response.data;
     } catch (error) {
-        console.error('Lỗi khi tạo danh mục mới:', error);
+        console.error(error);
         throw error;
     }
 };

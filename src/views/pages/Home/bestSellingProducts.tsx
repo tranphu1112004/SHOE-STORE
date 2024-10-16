@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { ProductCT } from "../../../context/ProductContext";
 import { Link } from "react-router-dom";
 
-const NewProduct: React.FC = () => {
+const BestSellingProducts: React.FC = () => {
   const productContext = useContext(ProductCT);
 
   if (!productContext) {
@@ -15,12 +15,11 @@ const NewProduct: React.FC = () => {
     return <div>Loading...</div>;
   }
 
-  // Lấy các sản phẩm được kích hoạt và sắp xếp theo ngày thêm mới nhất
   const newProducts = products
-    .filter((product) => product.isActive) // Chỉ lấy sản phẩm đang hoạt động
-    .sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime()) // Sắp xếp theo ngày thêm mới
+    .filter((product) => product.isActive && product.category === "Sneakers") 
+    .sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime()) 
     .sort((a,b)=> b.quantity-a.quantity) 
-    .slice(0, 4); // Giới hạn hiển thị 4 sản phẩm
+    .slice(0, 4); 
 
   return (
     <div className="w-full">
@@ -102,4 +101,4 @@ const NewProduct: React.FC = () => {
   );
 };
 
-export default NewProduct;
+export default BestSellingProducts;

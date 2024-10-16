@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { ProductCT } from "../../../context/ProductContext";
 import { Link } from "react-router-dom";
 
-const NewProduct: React.FC = () => {
+const Product: React.FC = () => {
   const productContext = useContext(ProductCT);
 
   if (!productContext) {
@@ -16,27 +16,30 @@ const NewProduct: React.FC = () => {
   }
 
   const newProducts = products
-    .filter((product) => product.isActive) 
-    .sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime())
+    .filter((product) => product.isActive && product.category !== "Sneakers") 
+    .sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime()) 
     .slice(0, 8); 
 
   return (
-    <div className="w-full">
+    <div className="w-full mb-10">
       <div className="mt-16 mx-3 lg:md:text-center lg:md:mx-0">
+        <h2 className="font-protest-strike relative font-normal text-4xl">
+          QUẦN ÁO VÀ PHỤ KIỆN
+          <span className="text-lg absolute top-2 left-[218px] lg:md:hidden">
+            <i className="fa-solid fa-caret-right bottom-11"></i>
+          </span>
+        </h2>
 
-          <h2 className="font-protest-strike relative font-normal text-4xl">
-            Sản phẩm mới
-            <span className="text-lg absolute top-2 left-[218px] lg:md:hidden">
-              <i className="fa-solid fa-caret-right bottom-11"></i>
-            </span>
-          </h2>
-        
         <div className="relative">
-        <p className="text-sm font-medium mt-2">
-          <span className="font-semibold">MONA SNE✭KER </span>
-           nhà phân phối trính hãng của NIKE{" "}
-        </p>
-        <Link to={''}><div className=" absolute right-0 top-1 max-sm:hidden">Xem thêm <i className="text-xs fa-solid fa-angle-right"></i></div></Link>
+          <p className="text-sm font-medium mt-2">
+            <span className="font-semibold">MONA SNE✭KER </span>
+            nhà phân phối trính hãng của NIKE{" "}
+          </p>
+          <Link to={''}>
+            <div className=" absolute right-0 top-1 max-sm:hidden">
+              Xem thêm <i className="text-xs fa-solid fa-angle-right"></i>
+            </div>
+          </Link>
         </div>
       </div>
 
@@ -101,4 +104,4 @@ const NewProduct: React.FC = () => {
   );
 };
 
-export default NewProduct;
+export default Product;

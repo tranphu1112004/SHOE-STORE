@@ -6,7 +6,6 @@ type Props = {
     children: React.ReactNode;
 };
 
-// Định nghĩa kiểu dữ liệu cho context
 interface IOrderContext {
     Orders: IOrder[];
     onAddOrder: (userId: string, items: { idProduct: string; quantity: number; price: number; }[], totalPrice: number, status: string,createdAt:Date) => Promise<void>;
@@ -14,7 +13,6 @@ interface IOrderContext {
     onDeleteOrder: (id: string | number) => Promise<void>;
 }
 
-// Tạo context với giá trị mặc định
 export const OrderCT = createContext<IOrderContext | undefined>(undefined);
 
 const OrderContext: React.FC<Props> = ({ children }) => {

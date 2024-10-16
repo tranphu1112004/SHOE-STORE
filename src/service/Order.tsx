@@ -7,7 +7,7 @@ export const GetAllOrders = async (): Promise<IOrder[]> => {
         const response = await instance.get(`/orders`);
         return response.data;
     } catch (error) {
-        console.error('Lỗi khi lấy danh sách đơn hàng:', error);
+        console.error(error);
         throw error;
     }
 };

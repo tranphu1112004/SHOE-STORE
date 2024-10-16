@@ -6,7 +6,6 @@
         children: React.ReactNode;
     };
 
-    // Define the context type
     interface IColorContext {
         colors: IColor[];
         deleteColor: (id: string) => Promise<void>;
@@ -14,7 +13,6 @@
         onAdd: (name: string, hex: string) => Promise<void>;
     }
 
-    // Create the context with the default value
     export const ColorCT = createContext<IColorContext | undefined>(undefined);
 
     const ColorContext: React.FC<Props> = ({ children }) => {
