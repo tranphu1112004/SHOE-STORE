@@ -72,7 +72,6 @@ const ListProduct: React.FC = () => {
                         <tbody className="bg-white divide-y divide-gray-200">
                             {paginatedProducts.map((product: IProduct) => {
                                 const brand = brands.find(b => b.id === product.brandId)?.name || 'Không xác định';
-                                // const category = categories.find(c => c.id === product.category)?.name || 'Không xác định';
 
                                 return (
                                     <tr key={product.id} className="hover:bg-gray-50">
