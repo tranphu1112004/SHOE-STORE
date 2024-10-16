@@ -1,11 +1,10 @@
 import React from 'react'
 
-type Props = {}
 
-const index = (props: Props) => {
+const Checkout = () => {
   return (
-    <div>index</div>
+    <div>Checkout</div>
   )
 }
 
-export default index
+export default Checkout

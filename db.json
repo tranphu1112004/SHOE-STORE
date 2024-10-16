@@ -1,0 +1,216 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Air Max 97",
+      "brandId": "nike",
+      "price": 150,
+      "pricenew": 120,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colorIds": [
+        "#FF0000",
+        "#000000"
+      ],
+      "stock": 50,
+      "description": "A classic Nike design with great comfort.",
+      "imageUrls": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f497de1a-99cc-42fd-a033-9027181d7e52/NIKE+AIR+MAX+90+LV8.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7a9b9ed9-0a5e-4967-9285-908e43ae0caf/NIKE+AIR+MAX+90+LV8.png"
+      ],
+      "category": "Sneakers",
+      "dateAdded": "2023-09-01",
+      "reviews": [
+        {
+          "id": 1,
+          "rating": 5,
+          "comment": "Amazing comfort!",
+          "createdAt": "2023-09-10",
+          "user": {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john@example.com"
+          }
+        }
+      ],
+      "sale": true,
+      "quantity": 1,
+      "isActive": true,
+      "idVochond": "voucher123"
+    },
+    {
+      "id": "CW2288-111",
+      "name": "Nike Air Force 1 '07",
+      "price": "2.929000",
+      "pricenew": 0,
+      "colorIds": [
+        "#FFFFFF",
+        "#000000"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "imageUrls": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b7d9211c-26e7-431a-ac24-b0540fb3c00f/AIR+FORCE+1+%2707.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/00375837-849f-4f17-ba24-d201d27be49b/AIR+FORCE+1+%2707.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fc4622c4-2769-4665-aa6e-42c974a7705e/AIR+FORCE+1+%2707.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/364d6a11-fad9-4a21-a763-59e458e41463/AIR+FORCE+1+%2707.png"
+      ],
+      "description": "The radiance lives on in the Nike Air Force 1 '07, the basketball original that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine.",
+      "category": "Sneakers",
+      "dateAdded": "2024-10-15T13:40:07.952Z",
+      "stock": 0,
+      "sale": false,
+      "quantity": 0,
+      "brandId": "nike",
+      "reviews": [],
+      "isActive": true
+    },
+    {
+      "id": "DZ4764-133",
+      "name": "Nike Air Force 1 '07 LV8",
+      "price": "3.239000",
+      "pricenew": "3100000",
+      "colorIds": [
+        "#FFFFFF",
+        "#000000"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "imageUrls": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/36113fef-2d76-4bf9-840b-3a3cb2ac3d44/WMNS+AIR+FORCE+1+%2707.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1f89ac26-621b-4dc8-9a49-fa844f5d57f3/WMNS+AIR+FORCE+1+%2707.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e4f09a71-9dd6-480f-b6f1-078ee3b3d431/WMNS+AIR+FORCE+1+%2707.png",
+        ""
+      ],
+      "description": "Vintage details elevate an icon for timeless style that's easy to wear. Premium leather gives these kicks a classic feel while canvas and exposed foam on the tongue pair with retro branding to add a heritage look. Of course, some things never change: Nike Air units still cushion your every step.",
+      "category": "Sneakers",
+      "dateAdded": "2024-10-15T17:21:39.026Z",
+      "stock": "2",
+      "sale": true,
+      "quantity": 0,
+      "brandId": "nike",
+      "reviews": [],
+      "isActive": true
+    },
+    {
+      "id": "DV0788-001",
+      "name": "Nike Air Force 1 '07",
+      "price": "3.239000",
+      "pricenew": 0,
+      "colorIds": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "imageUrls": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f3e7049-5c99-428c-abcd-e246b086f2ed/AIR+FORCE+1+%2707.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ea4b6be4-a997-479d-a7fa-4107e6dd7479/AIR+FORCE+1+%2707.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/035904de-5df8-490d-9e1d-bfd38c24b8d5/AIR+FORCE+1+%2707.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/67151472-8bd0-46cd-9f87-c6bda52a89ad/AIR+FORCE+1+%2707.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/49bba507-9a92-45fe-ae80-334ae52670b3/AIR+FORCE+1+%2707.png"
+      ],
+      "description": "The radiance lives on with the b-ball original. Crossing hardwood comfort with off-court flair, it puts a fresh spin on what you know best: '80s-inspired construction, bold details and nothin'-but-net style.\n\n",
+      "category": "Sneakers",
+      "dateAdded": "2024-10-15T17:41:19.467Z",
+      "stock": "2000",
+      "sale": false,
+      "quantity": 0,
+      "brandId": "nike",
+      "reviews": [],
+      "isActive": true
+    }
+  ],
+  "brands": [
+    {
+      "id": "nike",
+      "name": "Nike"
+    },
+    {
+      "id": "adidas",
+      "name": "Adidas"
+    },
+    {
+      "id": "puma",
+      "name": "Puma"
+    },
+    {
+      "id": "reebok",
+      "name": "Reebok"
+    },
+    {
+      "id": "newbalance",
+      "name": "New Balance"
+    }
+  ],
+  "colors": [
+    {
+      "id": "#FF0000",
+      "name": "Red",
+      "hex": "#FF0000"
+    },
+    {
+      "id": "#000000",
+      "name": "Black",
+      "hex": "#000000"
+    },
+    {
+      "id": "#FFFFFF",
+      "name": "White",
+      "hex": "#FFFFFF"
+    },
+    {
+      "id": "#B3B3B3",
+      "name": "Gray",
+      "hex": "#B3B3B3"
+    }
+  ],
+  "sizes": [
+    {
+      "id": "S",
+      "name": "Small"
+    },
+    {
+      "id": "M",
+      "name": "Medium"
+    },
+    {
+      "id": "L",
+      "name": "Large"
+    },
+    {
+      "id": "XL",
+      "name": "Extra Large"
+    }
+  ],
+  "categories": [
+    {
+      "id": "Sneakers",
+      "name": "Sneakers"
+    },
+    {
+      "id": "Running",
+      "name": "Running Shoes"
+    },
+    {
+      "id": "Casual",
+      "name": "Casual Shoes"
+    }
+  ]
+}

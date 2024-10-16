@@ -73,7 +73,7 @@ const HeaderPage = () => {
       </div>
       {/* top */}
       <div className=" w-full py-3 bg-black text-xl	">
-        <div className="flex justify-between items-center px-7 md:px-0 md:w-4/6 md:mx-auto">
+        <div className="flex justify-between items-center px-7 md:px-0 md:w-4/5 md:mx-auto">
           <div
             onClick={toggleMenu}
             className=" text-3xl  text-[#ffffffcc]  md:hidden"
@@ -83,7 +83,7 @@ const HeaderPage = () => {
             </span>
           </div>
           {/* tài khoản */}
-          <div className="hidden md:block text-[#ffffffcc] font-semibold	text-sm	relative">
+          <div className="hidden md:block text-[#ffffffcc]  font-semibold	text-sm	relative md:w-[25%]">
             <div onClick={toggleUser} className="cursor-pointer">
               <Link to={""}>
                 <span>ĐĂNG NHẬP</span>
@@ -103,8 +103,8 @@ const HeaderPage = () => {
             />
           </div>
           {/* tìm kiếm / giỏ hàng */}
-          <div className="relative">
-            <div className="flex text-[#ffffffcc] font-semibold text-base 	md:text-sm">
+          <div className="relative md:w-[25%]">
+            <div className=" flex text-[#ffffffcc] font-semibold text-base 	md:text-sm md:float-right">
               {/* tìm kiếm  */}
               <span className="hidden md:block">
                 <span>
@@ -133,7 +133,7 @@ const HeaderPage = () => {
               isCartVisible ? "" : "invisible"
             } w-full h-lvh backdrop-opacity-10 backdrop-invert bg-black/30 absolute text-center right-0 top-0  md:w-1/6 md:h-auto md:z-50`}
           >
-            <div className=" absolute w-3/5 bg-white text-center right-0 top-0 h-full backdrop-opacity-10 backdrop-invert bg-white/95 shadow-sm md:w-full md:h-auto md:top-20 md:transition-all	 md:right-[100%] md:shadow-xl py-4">
+            <div className=" absolute w-3/5 bg-white text-center right-0 top-0 h-full backdrop-opacity-10 backdrop-invert bg-white/95 shadow-sm md:w-full md:h-auto md:top-20 md:transition-all	 md:right-[50%] md:shadow-xl py-4">
               <p
                 onClick={toggleCart}
                 className="absolute top-1 right-3 text-gray-400 md:hidden"
@@ -149,13 +149,14 @@ const HeaderPage = () => {
                   <div className="w-1/3 h-15">
                     <img
                       className="w-full h-full"
-                      src={"../../../public/women-classic-2-600x384.jpg"}
+                      src={"../../../public/SABRINA+2+EP.png"}
                       alt=""
                     />
                   </div>
                   <div className="w-2/4">
                     <span className=" text-xs text-left text-gray-600">
-                      <p>Chuck Taylor Classic</p>
+                      <p>Sabrina 2 EP
+                      </p>
                       <p className="flex">
                         <span className="text-[10px]">1 x</span>
                         <span className="mx-1 text-[10px] font-semibold">
@@ -179,8 +180,8 @@ const HeaderPage = () => {
                   <button className="w-full py-2 bg-red-800 my-2 hover:bg-red-950 ">
                     XEM GỎI HÀNG
                   </button>
-                  <button className="w-full py-2 bg-orange-700 hover:bg-orange-800 ">
-                    tHANH TOÁN
+                  <button className="w-full py-2 bg-gray-800 hover:bg-gray-900 ">
+                    THANH TOÁN
                   </button>
                 </div>
               </div>
@@ -197,7 +198,7 @@ const HeaderPage = () => {
             <i className="fa-solid fa-xmark "></i>
           </div>
           <nav className="shadow-xl leading-[4] flex w-4/6 bg-[rgb(53, 53, 53)] h-full max-h-screen px-4 py-12 backdrop-opacity-10 backdrop-invert bg-white/95 md:bg-[#FFFfff] md:text-[#000000] md:py-0 md:justify-center md:relative md:w-full md:box-border md:overflow-visible overflow-y-auto">
-  <ul className="h-full font-medium md:flex md:space-x-6 md:text-sm">
+  <ul className="h-full font-medium md:flex md:space-x-8 md:text-base">
     <li className="leading-[0] mb-7 md:hidden">
       <input
         className="border box-border w-5/6 h-11 text-sl px-3 outline-0"
@@ -260,6 +261,11 @@ const HeaderPage = () => {
     <Link to={""}>
       <li className="border-t-2 border-gray-50-500 md:border-t-0 md:px-5 md:py-4 hover:md:text-red-950 ">
         TIN TỨC
+      </li>
+    </Link>
+    <Link to={""}>
+      <li className="border-t-2 border-gray-50-500 md:border-t-0 md:px-5 md:py-4 hover:md:text-red-950 ">
+        PHỤ KIỆN
       </li>
     </Link>
     <Link to={""}>

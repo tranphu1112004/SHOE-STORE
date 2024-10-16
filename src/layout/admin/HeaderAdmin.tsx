@@ -1,11 +1,32 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
-
-const HeaderAdmin = (props: Props) => {
-  return (
-    <div>HeaderAdmin</div>
-  )
+interface HeaderAdminProps {
+  className?: string;
 }
 
-export default HeaderAdmin
+const HeaderAdmin: React.FC<HeaderAdminProps> = ({ className }) => {
+  return (
+    <header className={className}>
+      <nav className="font-sans flex fixed flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
+        <div className="mb-2 sm:mb-0">
+          <a href="#" className="text-2xl no-underline text-grey-darkest hover:text-blue-dark">
+            Home
+          </a>
+        </div>
+        <div>
+          <a href="#" className="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">
+            One
+          </a>
+          <a href="#" className="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">
+            Two
+          </a>
+          <a href="#" className="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">
+            Three
+          </a>
+        </div>
+      </nav>
+    </header>
+  );
+};
+
+export default HeaderAdmin;

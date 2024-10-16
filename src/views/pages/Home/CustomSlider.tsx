@@ -6,14 +6,19 @@ const images = [
   {
     url: "../../../../public/poster-giay-den.jpg",
     title: "MONA SNE✭KER",
-    description: "Chào mừng bạn đến với ngôi nhà Nike! Tại đây, mỗi một dòng chữ, mỗi chi tiết và hình ảnh đều là những bằng chứng mang dấu ấn lịch sử Nike 100 năm, và đang không ngừng phát triển lớn mạnh.",
+    description: "Chạy nhanh hơn và xa hơn với giày Nike Zoom! Được trang bị công nghệ đệm Zoom Air tiên tiến, giày mang lại độ phản hồi và tốc độ tối ưu, lý tưởng cho những buổi tập luyện và thi đấu.",
     h2banner:"text-3xl font-bold",
     pbanner:""
   },
   {
-    url: "../../../../public/poster-giay-just-do-it.jpg",
+    url: "../../../../public/nike_shoe_in_background_of_banner_hd_nike.jpg",
     title: "MONA SNE✭KER",
-    description: "Chào mừng bạn đến với ngôi nhà Nike! Tại đây, mỗi một dòng chữ, mỗi chi tiết và hình ảnh đều là những bằng chứng mang dấu ấn lịch sử Nike 100 năm, và đang không ngừng phát triển lớn mạnh. ",
+    description: "Thêm phần cá tính cho tủ giày của bạn với Nike Dunk! Với thiết kế trẻ trung và đa dạng màu sắc, đây là lựa chọn hoàn hảo cho những tín đồ yêu thích phong cách streetwear.",
+  },
+  {
+    url: "../../../../public/058ca55eae5b86fa8a4d52c1d1e5a4a4.jpg",
+    title: "MONA SNE✭KER",
+    description: "Trải nghiệm sự kết hợp hoàn hảo giữa phong cách và hiệu suất với giày Nike Air Max. Với thiết kế đế khí độc đáo và chất liệu thoáng khí, đôi giày này sẽ mang lại sự thoải mái tối ưu cho mỗi bước đi của bạn!",
   },
 ];
 
@@ -35,10 +40,10 @@ const CustomSlider = () => {
       
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className="relative w-full lg:h-[500px] md:h-[350px] ">
+          <div key={index} className="relative w-full  md:h-[600px] lg:h-[650px]">
             <img src={image.url} alt={image.title} className="w-full h-[350px] md:h-full object-cover" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center lg:items-start lg:justify-start bg-black bg-opacity-5 text-white p-6">
-              <h2 className="text-4xl md:text-3xl lg:text-4xl xl:text-6xl font-bold text-center lg:text-left lg:absolute lg:left-[5%] lg:top-[50%]">
+            <div className="absolute inset-0 flex flex-col items-center justify-center lg:items-start lg:justify-start bg-black bg-opacity-40 text-white p-6">
+              <h2 className="text-4xl md:text-3xl lg:text-4xl xl:text-6xl font-bold text-center lg:text-left lg:absolute lg:left-[5%] lg:top-[53%]">
                 {image.title}
               </h2>
               <p className="text-xs md:text-base lg:text-base xl:text-lg text-center mt-1 w-[90%] md:w-[80%] lg:w-[45%] lg:absolute lg:left-[5%] lg:top-[65%] lg:text-left">
