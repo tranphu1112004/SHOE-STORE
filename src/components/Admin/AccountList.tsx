@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useUserContext } from '../../context/UserContext';
 import { IUser } from '../../interfaces/IUser';
 import '../../css/account-list.css'

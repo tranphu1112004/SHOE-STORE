@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useVoucherContext } from '../../context/VoucherContext';
 import { useUserContext } from '../../context/UserContext';
 import { IVoucher } from '../../interfaces/IOder';

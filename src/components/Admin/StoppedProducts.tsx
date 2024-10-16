@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { IProduct } from '../../interfaces/IProduct';
 import { ProductCT } from '../../context/ProductContext';
 import { ColorCT } from '../../context/ColorContext';

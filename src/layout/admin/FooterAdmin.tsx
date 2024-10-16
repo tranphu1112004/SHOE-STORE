@@ -1,4 +1,3 @@
-  import React from 'react';
 
   const FooterAdmin = (props: React.HTMLAttributes<HTMLDivElement>) => {
     return (

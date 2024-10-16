@@ -1,8 +1,7 @@
-import React from 'react'
 
-type Props = {}
 
-const Statical = (props: Props) => {
+
+const Statical = () => {
   return (
     <div>Statical</div>
   )

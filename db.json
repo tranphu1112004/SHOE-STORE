@@ -228,10 +228,16 @@
       "isActive": true
     }
   ],
+  "reviews":[],
+  "users":[],
   "brands": [
     {
       "id": "nike",
       "name": "Nike"
+    },
+    {
+      "id": "5008",
+      "name": "ngon"
     }
   ],
   "colors": [
@@ -254,6 +260,11 @@
       "id": "#B3B3B3",
       "name": "Gray",
       "hex": "#B3B3B3"
+    },
+    {
+      "id": "33f9",
+      "name": "qưdwdq",
+      "hex": "ưdqwd"
     }
   ],
   "sizes": [
@@ -286,6 +297,20 @@
     {
       "name": "Áo",
       "id": "Casual"
+    },
+    {
+      "id": "cd26",
+      "name": "Ba lô"
+    }
+  ],
+  "vouchers": [
+    {
+      "id": "1b26",
+      "code": "cưqwmk",
+      "discountPercentage": 3,
+      "minimumSpend": 10,
+      "expiryDate": "2024-10-17",
+      "isActive": true
     }
   ]
 }

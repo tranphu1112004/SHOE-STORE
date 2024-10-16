@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { ProductCT } from '../../context/ProductContext';
 import { ColorCT } from '../../context/ColorContext';
 import { SizeCT } from '../../context/SizeContext';
@@ -27,6 +27,7 @@ const AddProduct: React.FC = () => {
         stock: 0,
         sale: false,
         quantity: 0,
+        idVochond: [],
         brandId: '',
         reviews: [],
         id: '',
@@ -113,7 +114,8 @@ const AddProduct: React.FC = () => {
             brandId: '',
             reviews: [],
             id: '',
-            isActive: true
+            isActive: true,
+            idVochond:[]
         });
         setImageUrl('');
     };

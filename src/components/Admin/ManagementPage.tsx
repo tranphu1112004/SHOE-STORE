@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import  { useContext, useState } from 'react';
 import { ColorCT } from '../../context/ColorContext';
 import { CategoryCT } from '../../context/CategoryContext';
 import { BrandCT } from '../../context/BrandContext';
@@ -15,7 +15,7 @@ const ManagementPage: React.FC = () => {
     }
 
     const { colors, onAdd: addColor, onSubmitUpdate: updateColor, deleteColor } = colorContext;
-    const { categories, onAdd: addCategory, onUpdateCategory: updateCategory, onDeleteCategory } = categoryContext;
+    const { categories, onAddCategory: addCategory, onUpdateCategory: updateCategory, onDeleteCategory } = categoryContext;
     const { brands, onAdd: addBrand, onSubmitUpdate: updateBrand, deleteBrand } = brandContext;
 
     const [colorName, setColorName] = useState('');

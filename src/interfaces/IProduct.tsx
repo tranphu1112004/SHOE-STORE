@@ -15,7 +15,7 @@ export interface IProduct {
     sale: boolean;
     quantity: number;
     isActive: boolean;
-    idVochond: string;
+    idVochond: string[];
 }
 
 export interface Review {
@@ -72,4 +72,5 @@ export type FormType = Pick<
   | 'pricenew'
   | 'reviews'
   |'isActive'
+  | 'idVochond'
 >;

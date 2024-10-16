@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import  { useRef } from 'react';
 import CustomSlider from './CustomSlider';
 import BestSale from './BestSale';
 import NewProduct from './NewProduct';

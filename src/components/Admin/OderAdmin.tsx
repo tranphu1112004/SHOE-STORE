@@ -1,8 +1,6 @@
-import React from 'react'
 
-type Props = {}
 
-const OderAdmin = (props: Props) => {
+const OderAdmin = () => {
   return (
     <div>OderAdmin</div>
   )

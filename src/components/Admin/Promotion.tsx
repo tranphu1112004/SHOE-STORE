@@ -1,8 +1,6 @@
-import React from 'react'
 
-type Props = {}
 
-const Promotion = (props: Props) => {
+const Promotion = () => {
   return (
     <div>Promotion</div>
   )

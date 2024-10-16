@@ -1,8 +1,6 @@
-import React from 'react'
 
-type Props = {}
 
-const ColorDetail = (props: Props) => {
+const ColorDetail = () => {
   return (
     <div>ColorDetail</div>
   )
