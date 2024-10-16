@@ -19,19 +19,20 @@ const NewProduct: React.FC = () => {
   const newProducts = products
     .filter((product) => product.isActive) // Chỉ lấy sản phẩm đang hoạt động
     .sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime()) // Sắp xếp theo ngày thêm mới
-    .slice(0, 8); // Giới hạn hiển thị 4 sản phẩm
+    .sort((a,b)=> b.quantity-a.quantity) 
+    .slice(0, 4); // Giới hạn hiển thị 4 sản phẩm
 
   return (
     <div className="w-full">
       <div className="mt-16 mx-3 lg:md:text-center lg:md:mx-0">
-        <Link to={""}>
+      
           <h2 className="font-protest-strike relative font-normal text-4xl">
-            Sản phẩm mới
-            <span className="text-lg absolute top-2 left-[218px] lg:md:hidden">
+            SẢN PHẨM NỔI BẬT
+            <span className="text-lg absolute top-2 left-[298px] lg:md:hidden">
               <i className="fa-solid fa-caret-right bottom-11"></i>
             </span>
           </h2>
-        </Link>
+     
         <div className="relative">
         <p className="text-sm font-medium mt-2">
           Sản phẩn được phân phối chính hãng tại{" "}
@@ -41,7 +42,7 @@ const NewProduct: React.FC = () => {
         </div>
       </div>
 
-      <div className="my-5 grid grid-cols-2 lg:grid-cols-5 gap-1 lg:md:gap-2 md:grid-cols-2 md:mt-5 md:mx-0">
+      <div className="my-5 grid grid-cols-2 lg:grid-cols-4 gap-1 lg:md:gap-2 md:grid-cols-2 md:mt-5 md:mx-0">
         {newProducts.map((product, index) => (
           <div key={index} className="relative mx-2 md:mx-0 overflow-hidden">
             <div className="w-full h-auto">
@@ -54,7 +55,7 @@ const NewProduct: React.FC = () => {
               <img
                 src={product.imageUrls[0]}
                 alt={product.name}
-                className=" w-full h-[200px] lg:h-[300px] md:h-[400px] object-cover"
+                className="w-full h-[200px] lg:h-[400px] md:h-[400px] object-cover"
               />
 
               {product.stock === 0 && (
@@ -96,6 +97,7 @@ const NewProduct: React.FC = () => {
           </div>
         ))}
       </div>
+      <p className="text-center text-sm text-gray-400 text-decoration lg:md:hidden">Xem thêm</p>
     </div>
   );
 };

@@ -36,3 +36,7 @@ button {
 button:hover {
   opacity: 0.8;
 }
+
+.text-shadow {
+  text-shadow: 2px 2px 0 white, -1px -1px 0 white, -1px 1px 0 white, 1px -1px 0 white, 1px 1px 0 white;
+}

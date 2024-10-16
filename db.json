@@ -135,28 +135,103 @@
       "brandId": "nike",
       "reviews": [],
       "isActive": true
+    },
+    {
+      "id": "FB9767-010",
+      "name": "Nike Sportswear",
+      "price": "1.379000",
+      "pricenew": "1.103199",
+      "colorIds": [
+        "#000000"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "imageUrls": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7feabe43-c08c-4e32-bb19-d1fab0615fee/AS+M+NSW+TEE+OS+PREM+ESSNTL+SU.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1116ec78-5b3f-469a-a352-3632e48e770a/AS+M+NSW+TEE+OS+PREM+ESSNTL+SU.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1ea7ed04-5964-4ad8-a224-b884d15fb60c/AS+M+NSW+TEE+OS+PREM+ESSNTL+SU.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7268fea3-8eb3-490d-96e4-964a6dae314d/AS+M+NSW+TEE+OS+PREM+ESSNTL+SU.png",
+        ""
+      ],
+      "description": "Time to elevate your T-shirt collection? This tee answers the call. Heavyweight cotton and a clean, embroidered Futura logo keep it simple for pairing up with any outfit. The oversize fit gives you plenty of extra space for casual style and easy layering.",
+      "category": "Casual",
+      "dateAdded": "2024-10-16T08:03:11.650Z",
+      "stock": "100",
+      "sale": true,
+      "quantity": 0,
+      "brandId": "nike",
+      "reviews": [],
+      "isActive": true
+    },
+    {
+      "id": "FZ5393-370",
+      "name": "Nike Sportswear",
+      "price": "1.279000",
+      "pricenew": "1.023199",
+      "colorIds": [
+        "#FFFFFF"
+      ],
+      "sizes": [
+        "S",
+        "M"
+      ],
+      "imageUrls": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/535bbaf4-d810-4871-bc45-7cc9cb2eeaf7/AS+M+NSW+TEE+M90+OC+LBR+SEGA.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/005a56b3-be37-4287-b839-2dc1dda0b6db/AS+M+NSW+TEE+M90+OC+LBR+SEGA.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6d80cda1-104d-4a34-8781-04b7aebd0fbd/AS+M+NSW+TEE+M90+OC+LBR+SEGA.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/300d5399-70f1-4939-989b-967a52838d0f/AS+M+NSW+TEE+M90+OC+LBR+SEGA.png",
+        ""
+      ],
+      "description": "Dropped shoulders, longer sleeves and a roomy fit through the body and hips give this Max90 tee a relaxed and casual look. Midweight cotton fabric feels soft and has a slight drape.",
+      "category": "Running",
+      "dateAdded": "2024-10-16T08:05:59.793Z",
+      "stock": "100",
+      "sale": true,
+      "quantity": 0,
+      "brandId": "nike",
+      "reviews": [],
+      "isActive": true
+    },
+    {
+      "id": "FV7510-063",
+      "name": "Nike Sportswear",
+      "price": "1.739000",
+      "pricenew": 0,
+      "colorIds": [
+        "#FFFFFF",
+        "#000000"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "imageUrls": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/07bc47b9-acb7-4e27-80b1-1171057a11a0/AS+W+NSW+DANCE+OS+SHRUG.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b3326629-d4f0-462a-a4b6-e26ec1749e95/AS+W+NSW+DANCE+OS+SHRUG.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/73d8ae50-b137-40d4-a6a7-fe34619b3ff0/AS+W+NSW+DANCE+OS+SHRUG.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/03789a2e-0ae6-40a2-a96e-6887e2378306/AS+W+NSW+DANCE+OS+SHRUG.png"
+      ],
+      "description": "Your look, your way. This shrug features an oversized yet cropped design for an unapologetically bold look that's easy to layer. The French terry is heavy enough to drape well but feels light enough to run through it again. Check out the interior logo that adds a bit of something unique to your look.",
+      "category": "Casual",
+      "dateAdded": "2024-10-16T08:10:46.081Z",
+      "stock": "200",
+      "sale": false,
+      "quantity": 0,
+      "brandId": "nike",
+      "reviews": [],
+      "isActive": true
     }
   ],
   "brands": [
     {
       "id": "nike",
       "name": "Nike"
-    },
-    {
-      "id": "adidas",
-      "name": "Adidas"
-    },
-    {
-      "id": "puma",
-      "name": "Puma"
-    },
-    {
-      "id": "reebok",
-      "name": "Reebok"
-    },
-    {
-      "id": "newbalance",
-      "name": "New Balance"
     }
   ],
   "colors": [
@@ -201,16 +276,16 @@
   ],
   "categories": [
     {
-      "id": "Sneakers",
-      "name": "Sneakers"
+      "name": "Giày",
+      "id": "Sneakers"
     },
     {
-      "id": "Running",
-      "name": "Running Shoes"
+      "name": "Quần",
+      "id": "Running"
     },
     {
-      "id": "Casual",
-      "name": "Casual Shoes"
+      "name": "Áo",
+      "id": "Casual"
     }
   ]
 }

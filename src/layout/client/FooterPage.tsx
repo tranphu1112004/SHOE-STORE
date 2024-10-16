@@ -4,7 +4,7 @@ import React from 'react';
 const FooterPage = () => {
   return (
     <footer className="bg-black w-full text-white py-10">
-      <div className="container  px-6 grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-28 md:mx-auto md:px-0">
+      <div className="container  px-6 grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-28 md:mx-auto md:px-0 lg:gap-6 ">
         
         {/* Giới thiệu */}
         <div>
@@ -14,8 +14,8 @@ const FooterPage = () => {
           </p>
         </div>
 
-        <div>
-          <h3 className="text-xl font-bold mb-2 border-b-2 border-red-600 inline-block">MENU</h3>
+        <div className=''>
+          <h3 className="text-xl font-bold mb-2 border-b-2 border-red-600 inline-block ">MENU</h3>
           <ul className="text-gray-400 text-sm space-y-2">
             <li><a href="#" className="hover:text-red-600">Trang chủ</a></li>
             <li><a href="#" className="hover:text-red-600">Cửa hàng</a></li>
@@ -77,7 +77,7 @@ const FooterPage = () => {
           <i className="fa-brands fa-cc-amazon-pay"></i>
           </p>
         </div>
-        <p className="mt-4">Dự án thực tập <a href="#" className="text-red-600">Trần Hữu Phú</a></p>
+        <p className="mt-4">&copy; 2024 Bản quyền thuộc về <a href="#" className="text-red-600">Trần Hữu Phú</a>. All rights reserved.</p>
       </div>
     </footer>
   )
