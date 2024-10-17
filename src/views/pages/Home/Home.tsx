@@ -5,6 +5,7 @@ import NewProduct from './NewProduct';
 import BestSellingProducts from './bestSellingProducts';
 import Trending from './Trending';
 import Product from './Product';
+import UpSale from './UpSale';
 
 const Home = () => {
   const bestProductsRef = useRef<HTMLDivElement>(null);
@@ -20,7 +21,8 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col mt-[85px] flex-grow md:mt-[140px]">
+      <UpSale/>
       <div className="flex-grow my-4 w-full mx-auto md:my-3">
         <CustomSlider />
         <BestSale scrollToBestProducts={handleScrollToBestProducts} />

@@ -45,6 +45,7 @@ const Product: React.FC = () => {
 
       <div className="my-5 grid grid-cols-2 lg:grid-cols-5 gap-1 lg:md:gap-2 md:grid-cols-2 md:mt-5 md:mx-0">
         {newProducts.map((product, index) => (
+          <Link to=''>
           <div key={index} className="relative mx-2 md:mx-0 overflow-hidden">
             <div className="w-full h-auto">
               {product.sale && (
@@ -96,6 +97,7 @@ const Product: React.FC = () => {
               </div>
             </div>
           </div>
+          </Link>
         ))}
       </div>
       <p className="text-center text-sm text-gray-400 text-decoration lg:md:hidden">Xem thêm</p>

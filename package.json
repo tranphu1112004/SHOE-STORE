@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "http://tranphu1112004.github.io/SHOE-STORE",
-
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -27,6 +26,7 @@
     "react-hook-form": "^7.53.0",
     "react-router-dom": "^6.26.2",
     "react-slick": "^0.30.2",
+    "react-toastify": "^10.0.6",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 interface BestSaleProps {
   scrollToBestProducts: () => void;
@@ -51,27 +52,29 @@ const BestSale: React.FC<BestSaleProps> = ({ scrollToBestProducts }) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:mt-5">
         {imageBest.map((image, index) => (
-          <div
-            key={index}
-            className="rounded-md relative mx-3 my-2 group shadow-white lg:m-0 lg:my-0"
-          >
-            <img
-              src={image.url}
-              alt={`best sale ${index}`}
-              className="w-full h-[350px] object-cover group-hover:brightness-75 transition duration-300 ease-in-out md:h-[650px]"
-            />
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-25 md:opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out md:hidden lg:flex">
-              <h2 className="text-2xl font-bold text-white mb-2">
-                {image.title}
-              </h2>
-              <p className="text-sm w-2/3 text-white tracking-widest">
-                {image.subtitle}
-              </p>
-              <button className="mt-10 bg-black text-white py-4 font-semibold px-8 hover:bg-opacity-75 transition">
-                {image.buttonBest}
-              </button>
+          <Link to={''}>
+            <div
+              key={index}
+              className="rounded-md relative mx-3 my-2 group shadow-white lg:m-0 lg:my-0"
+            >
+              <img
+                src={image.url}
+                alt={`best sale ${index}`}
+                className="w-full h-[350px] object-cover group-hover:brightness-75 transition duration-300 ease-in-out md:h-[650px]"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-25 md:opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out md:hidden lg:flex">
+                <h2 className="text-2xl font-bold text-white mb-2">
+                  {image.title}
+                </h2>
+                <p className="text-sm w-2/3 text-white tracking-widest">
+                  {image.subtitle}
+                </p>
+                <button className="mt-10 bg-black text-white py-4 font-semibold px-8 hover:bg-opacity-75 transition">
+                  {image.buttonBest}
+                </button>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

@@ -6,13 +6,10 @@ import UpSale from "../../views/pages/Home/UpSale";
 const LayoutClient = () => {
   return (
     <div className="flex flex-col min-h-screen bg-[#FFFAFA]">
-      
       <div className="fixed w-full z-10">
         <HeaderPage />
       </div>
-        
-      <div className="mt-[85px] flex-grow md:mt-[150px] md:w-4/5 md:mx-auto lg:w-4/5">
-      <UpSale/>
+      <div className=" md:w-5/6 md:mx-auto lg:w-4/5">
         <Outlet />
       </div>
       <FooterPage />

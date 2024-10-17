@@ -2,7 +2,7 @@
 
 const FooterPage = () => {
   return (
-    <footer className="bg-black w-full text-white py-10">
+    <footer className="bg-black w-full text-white py-10  md:px-36 ">
       <div className="container  px-6 grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-28 md:mx-auto md:px-0 lg:gap-6 ">
         
         {/* Giới thiệu */}

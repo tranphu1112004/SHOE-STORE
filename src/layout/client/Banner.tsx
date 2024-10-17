@@ -7,8 +7,6 @@ const images = [
     url: "../../../../public/poster-giay-den.jpg",
     title: "MONA SNE✭KER",
     description: "Chạy nhanh hơn và xa hơn với giày Nike Zoom! Được trang bị công nghệ đệm Zoom Air tiên tiến, giày mang lại độ phản hồi và tốc độ tối ưu, lý tưởng cho những buổi tập luyện và thi đấu.",
-    h2banner:"text-3xl font-bold",
-    pbanner:""
   },
   {
     url: "../../../../public/nike_shoe_in_background_of_banner_hd_nike.jpg",
@@ -40,7 +38,7 @@ const CustomSlider = () => {
       
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className="relative w-full h-[250px] md:h-[600px] lg:h-[650px]">
+          <div key={index} className="relative w-full  md:h-[200px] lg:h-[300px]">
             <img src={image.url} alt={image.title} className="w-full h-[350px] md:h-full object-cover" />
             <div className="absolute inset-0 flex flex-col items-center justify-center lg:items-start lg:justify-start bg-black bg-opacity-40 text-white p-6">
               <h2 className="text-4xl md:text-3xl lg:text-4xl xl:text-6xl font-bold text-center lg:text-left lg:absolute lg:left-[5%] lg:top-[53%]">

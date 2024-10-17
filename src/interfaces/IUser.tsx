@@ -9,3 +9,10 @@ export interface IUser {
     dateCreated: Date;
     IdVoucher: (string | number)[];
 }
+export interface IContact {
+    fullName: string;
+    email: string;
+    phone: string;
+    address: string;
+    message: string;
+}

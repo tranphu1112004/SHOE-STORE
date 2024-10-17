@@ -226,10 +226,75 @@
       "brandId": "nike",
       "reviews": [],
       "isActive": true
+    },
+    {
+      "id": "FQ4112-001",
+      "name": "Nike Revolution 7 EasyOn",
+      "price": "1.789000",
+      "pricenew": 0,
+      "colorIds": [
+        "#FFFFFF",
+        "#000000"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "imageUrls": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ca929f7e-f433-46b7-8d83-1a6171c172ce/NIKE+REVOLUTION+7+EASYON.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3c638d78-4949-4ec4-b13f-2060b071efb4/NIKE+REVOLUTION+7+EASYON.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/cd8ca3fd-8faa-4076-a75d-7d99e02a63ab/NIKE+REVOLUTION+7+EASYON.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8e74d252-941b-48d4-a5c1-9fd8f090a30a/NIKE+REVOLUTION+7+EASYON.png",
+        ""
+      ],
+      "description": "We loaded the Revolution 7 with the sort of soft cushioning and support that might change your running world. Stylish as ever, comfortable when the rubber meets the road and performance-driven for your desired pace, it's an evolution of a fan favourite that offers a soft, smooth ride. We added the quick-and-easy toggle system that makes putting these shoes on and taking them off a breeze.",
+      "category": "Sneakers",
+      "dateAdded": "2024-10-16T16:57:18.084Z",
+      "stock": "100",
+      "sale": false,
+      "quantity": 0,
+      "idVochond": [],
+      "brandId": "nike",
+      "reviews": [],
+      "isActive": true
+    },
+    {
+      "id": "FV6603-101",
+      "name": "Nike P-6000",
+      "price": "3.239000",
+      "pricenew": 0,
+      "colorIds": [
+        "#B3B3B3",
+        "#FFFFFF"
+      ],
+      "sizes": [
+        "S",
+        "L",
+        "M"
+      ],
+      "imageUrls": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fa1bceaf-21bc-44b5-853b-33eac3c34e2b/WMNS+NIKE+P-6000.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fa1bceaf-21bc-44b5-853b-33eac3c34e2b/WMNS+NIKE+P-6000.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fa1bceaf-21bc-44b5-853b-33eac3c34e2b/WMNS+NIKE+P-6000.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c8c72cfd-0fe4-4ff8-aa13-6edb641adcc1/WMNS+NIKE+P-6000.png",
+        ""
+      ],
+      "description": "A mash-up of past Pegasus sneakers, the P-6000 takes early-2000s running to modern heights. Featuring airy mesh and sporty lines, it's the perfect mix of head-turning looks and breathable comfort. Plus, its foam cushioning adds a lifted, athletics-inspired stance and unbelievable cushioning.",
+      "category": "Sneakers",
+      "dateAdded": "2024-10-16T16:59:27.511Z",
+      "stock": "1000",
+      "sale": false,
+      "quantity": 0,
+      "idVochond": [],
+      "brandId": "nike",
+      "reviews": [],
+      "isActive": true
     }
   ],
-  "reviews":[],
-  "users":[],
+  "reviews": [],
+  "users": [],
   "brands": [
     {
       "id": "nike",
@@ -312,5 +377,80 @@
       "expiryDate": "2024-10-17",
       "isActive": true
     }
-  ]
+  ],
+  "contacts": [
+    {
+      "id": "c4a7",
+      "fullName": "Trần Hữu Phú",
+      "email": "anhphu11124@gmail.com",
+      "phone": "0961162906",
+      "address": "số 1 vân vanh",
+      "message": "sdfe"
+    },
+    {
+      "id": "3faa",
+      "fullName": "Trần Hữu Phú",
+      "email": "anhphu11124@gmail.com",
+      "phone": "0961162906",
+      "address": "số 1 vân vanh",
+      "message": "anh phu dep trai"
+    },
+    {
+      "id": "dfac",
+      "fullName": "Trần Hữu Phú",
+      "email": "anhphu11124@gmail.com",
+      "phone": "0961162906",
+      "address": "số 1 vân vanh",
+      "message": "anh phu dep trai"
+    },
+    {
+      "id": "e9f2",
+      "fullName": "EWEF",
+      "email": "APHH@GMAIL.COM",
+      "phone": "43545452",
+      "address": "SDGRSER",
+      "message": "FBDBF"
+    },
+    {
+      "id": "a5fa",
+      "fullName": "EWEF",
+      "email": "APHH@GMAIL.COM",
+      "phone": "43545452",
+      "address": "SDGRSER",
+      "message": "FBDBF"
+    },
+    {
+      "id": "1920",
+      "fullName": "EWEF",
+      "email": "APHH@GMAIL.COM",
+      "phone": "43545452",
+      "address": "SDGRSER",
+      "message": "FBDBF"
+    },
+    {
+      "id": "567f",
+      "fullName": "iugiugp",
+      "email": "a@gmail.com",
+      "phone": "234567890",
+      "address": "ytftyif",
+      "message": "vluvghv"
+    },
+    {
+      "id": "6d29",
+      "fullName": "phu tran",
+      "email": "anhphu11124@gmail.com",
+      "phone": "0961162906",
+      "address": "phuong canh",
+      "message": "fÈWAE"
+    },
+    {
+      "id": "41f1",
+      "fullName": "Trần Hữu Phú",
+      "email": "anhphu11124@gmail.com",
+      "phone": "0961162906",
+      "address": "số 1 vân vanh",
+      "message": "ag"
+    }
+  ],
+  "orders": []
 }
