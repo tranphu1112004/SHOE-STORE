@@ -1,48 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Air Max 97",
-      "brandId": "nike",
-      "price": 150,
-      "pricenew": 120,
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "colorIds": [
-        "#FF0000",
-        "#000000"
-      ],
-      "stock": 50,
-      "description": "A classic Nike design with great comfort.",
-      "imageUrls": [
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f497de1a-99cc-42fd-a033-9027181d7e52/NIKE+AIR+MAX+90+LV8.png",
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7a9b9ed9-0a5e-4967-9285-908e43ae0caf/NIKE+AIR+MAX+90+LV8.png"
-      ],
-      "category": "Sneakers",
-      "dateAdded": "2023-09-01",
-      "reviews": [
-        {
-          "id": 1,
-          "rating": 5,
-          "comment": "Amazing comfort!",
-          "createdAt": "2023-09-10",
-          "user": {
-            "id": 1,
-            "name": "John Doe",
-            "email": "john@example.com"
-          }
-        }
-      ],
-      "sale": true,
-      "quantity": 1,
-      "isActive": true,
-      "idVochond": "voucher123"
-    },
-    {
       "id": "CW2288-111",
       "name": "Nike Air Force 1 '07",
       "price": "2.929000",
@@ -452,5 +410,8 @@
       "message": "ag"
     }
   ],
-  "orders": []
+  "orders": [],
+  "content":[
+    
+  ]
 }

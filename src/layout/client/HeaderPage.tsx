@@ -286,7 +286,7 @@ const HeaderPage = () => {
                 </li>
               </Link>
 
-              <Link to={""}>
+              <Link to={"/content"}>
                 <li className="border-t-2 border-gray-50-500 lg:border-t-0 lg:px-5 lg:py-4 hover:lg:text-red-950 ">
                   TIN TỨC
                 </li>

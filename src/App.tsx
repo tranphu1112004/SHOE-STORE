@@ -165,6 +165,7 @@ import Order from "./views/pages/Oder/Oder"; // Fixed typo
 import Cart from "./views/pages/Cart/Cart";
 import Introduce from "./views/pages/Introduce/Introduce";
 import { ContactProvider } from "./context/ContactContext";
+import Content from "./views/pages/Content/Content";
 
 function App() {
   const router = useRoutes([
@@ -236,6 +237,7 @@ function App() {
         { path: "products/stopped", element: <StoppedProducts /> },
         { path: "checkout", element: <OrderAdmin /> }, // Fixed typo
         { path: "users", element: <AccountList /> },
+        { path: "content", element: <Content /> },
         { path: "statical", element: <Statical /> },
         { path: "voucher", element: <Voucher /> }, // Fixed typo
         { path: "product/:id", element: <ProductDetail /> },
