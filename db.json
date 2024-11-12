@@ -49,8 +49,7 @@
       "imageUrls": [
         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/36113fef-2d76-4bf9-840b-3a3cb2ac3d44/WMNS+AIR+FORCE+1+%2707.png",
         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1f89ac26-621b-4dc8-9a49-fa844f5d57f3/WMNS+AIR+FORCE+1+%2707.png",
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e4f09a71-9dd6-480f-b6f1-078ee3b3d431/WMNS+AIR+FORCE+1+%2707.png",
-        ""
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e4f09a71-9dd6-480f-b6f1-078ee3b3d431/WMNS+AIR+FORCE+1+%2707.png"
       ],
       "description": "Vintage details elevate an icon for timeless style that's easy to wear. Premium leather gives these kicks a classic feel while canvas and exposed foam on the tongue pair with retro branding to add a heritage look. Of course, some things never change: Nike Air units still cushion your every step.",
       "category": "Sneakers",
@@ -320,10 +319,6 @@
     {
       "name": "Áo",
       "id": "Casual"
-    },
-    {
-      "id": "cd26",
-      "name": "Ba lô"
     }
   ],
   "vouchers": [
@@ -411,7 +406,62 @@
     }
   ],
   "orders": [],
-  "content":[
-    
+  "contents": [
+    {
+      "id": "1",
+      "name": "Nike Air Max",
+      "image": "https://static.nike.com/a/images/w_480,c_auto,q_auto,f_auto/8dfc2a49-8382-4ed8-af52-17a5c75f70f5/air-max-dn-the-next-era-of-air.jpg",
+      "content": "The Nike Air Max is a revolutionary shoe that offers exceptional comfort and style. Its iconic air cushioning system has made it a favorite for athletes and casual wearers alike.",
+      "type": "shoe",
+      "createdAt": "2024-10-18T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "name": "Nike Sportswear",
+      "image": "https://static.nike.com/a/images/w_480,c_auto,q_auto,f_auto/7a2d8808-a35c-4934-a97d-eef0fdbca17e/community-studio.jpg",
+      "content": "Nike Sportswear brings performance innovation and style together, ensuring athletes and everyday users are dressed for success in any condition.",
+      "type": "apparel",
+      "createdAt": "2024-10-18T12:00:00Z"
+    },
+    {
+      "id": "3",
+      "name": "Nike Air Zoom Pegasus",
+      "image": "https://static.nike.com/a/images/w_480,c_auto,q_auto/f_auto/b8f5a576-9a7d-40de-b93f-3a7337b6324f/nike-pegasus-zoom.jpg",
+      "content": "Nike Air Zoom Pegasus is a versatile running shoe designed for both beginners and seasoned runners. It combines lightweight support and Zoom Air cushioning for an energetic stride.",
+      "type": "shoe",
+      "createdAt": "2024-10-19T08:00:00Z"
+    },
+    {
+      "id": "4",
+      "name": "Nike Dri-FIT T-Shirt",
+      "image": "https://static.nike.com/a/images/w_480,c_auto,q_auto/f_auto/t-shirt.jpg",
+      "content": "The Nike Dri-FIT T-shirt wicks away sweat and helps you stay dry and comfortable during workouts. It's a must-have for athletes and fitness enthusiasts.",
+      "type": "apparel",
+      "createdAt": "2024-10-19T09:00:00Z"
+    },
+    {
+      "id": "5",
+      "name": "Nike Training Backpack",
+      "image": "https://static.nike.com/a/images/w_480,c_auto,q_auto/f_auto/backpack.jpg",
+      "content": "The Nike Training Backpack is built for durability and convenience. With multiple compartments, it is perfect for gym-goers and athletes on the move.",
+      "type": "accessory",
+      "createdAt": "2024-10-19T10:30:00Z"
+    },
+    {
+      "id": "6",
+      "name": "Nike Pro Tights",
+      "image": "https://static.nike.com/a/images/w_480,c_auto,q_auto/f_auto/tights.jpg",
+      "content": "Nike Pro Tights provide a secure and comfortable fit with high-performance fabric. Designed for flexibility and freedom of movement during intense workouts.",
+      "type": "apparel",
+      "createdAt": "2024-10-19T11:00:00Z"
+    },
+    {
+      "id": "7",
+      "name": "Nike Air Force 1",
+      "image": "https://static.nike.com/a/images/w_480,c_auto,q_auto/f_auto/air-force-1.jpg",
+      "content": "The Nike Air Force 1 is a timeless classic, celebrated for its sleek design and versatility. Loved by athletes and sneakerheads alike, it’s an essential part of any wardrobe.",
+      "type": "shoe",
+      "createdAt": "2024-10-19T11:30:00Z"
+    }
   ]
 }

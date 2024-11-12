@@ -36,12 +36,12 @@ export interface User {
 export interface IColor {
     id: string;
     name: string;
-    hex: string; // Mã màu HEX
+    hex: string; 
 }
 
 export interface ISize {
     id: string;
-    name: string; // Tên kích cỡ (S, M, L, XL)
+    name: string; 
 }
 
 export interface IBrand {

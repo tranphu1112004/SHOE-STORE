@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
+import { ICartItem } from "../../interfaces/ICartItem";
 
 const HeaderPage = () => {
   const [isCartVisible, setIsCartVisible] = useState(false);
   const [isMenu, setIsMenu] = useState(false);
   const [isDowMenuNam, setisDowMenuNam] = useState(false);
   const [isUser, setisisUser] = useState(false);
+  const { cart, getTotalPrice, removeItemFromCart } = useCart();
 
   const toggleCart = () => {
     setIsCartVisible(!isCartVisible);
@@ -23,6 +26,13 @@ const HeaderPage = () => {
     setisisUser(!isUser);
   };
 
+  const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+  const totalAmount = getTotalPrice(); // Total price of the cart
+
+  // Xóa sản phẩm khỏi giỏ hàng
+  const handleRemoveItem = (id: string | number) => {
+    removeItemFromCart(id);
+  };
   return (
     <div className=" ">
       <div
@@ -153,7 +163,8 @@ const HeaderPage = () => {
                   className="cursor-pointer mx-4"
                   onClick={toggleCart}
                 >
-                  <span>GIỎ HÀNG</span> / <span>1,250,000 VNĐ</span>
+                  <span>GIỎ HÀNG</span> /{" "}
+                  <span>{getTotalPrice().toLocaleString()} VNĐ</span>
                 </span>
               </span>
               <span
@@ -165,31 +176,45 @@ const HeaderPage = () => {
               </span>
             </div>
           </div>
-          <div className={`${isCartVisible ? "" : "invisible"} w-full h-lvh backdrop-opacity-10 z-10 backdrop-invert bg-black/30 absolute text-center right-0 top-0 lg:top-1/2 lg:right-[7%] lg:h-auto lg:w-1/5`}>
+          <div
+            className={`${
+              isCartVisible ? "" : "invisible"
+            } w-full h-lvh backdrop-opacity-10 z-10 backdrop-invert bg-black/30 absolute text-center right-0 top-0 lg:top-1/2 lg:right-[7%] lg:h-auto lg:w-1/5`}
+          >
             <div className="absolute w-3/5 bg-white right-0 top-0 h-full lg:w-full lg:h-auto shadow-2xl">
               {/* Cart Contents */}
-              <p onClick={toggleCart} className="absolute top-1 right-3 text-gray-400 lg:hidden">
+              <p
+                onClick={toggleCart}
+                className="absolute top-1 right-3 text-gray-400 lg:hidden"
+              >
                 <i className="fa-solid fa-xmark"></i>
               </p>
               <div className="w-5/6 mx-auto">
                 <p className="p-5 text-[15px] font-medium">GIỎ HÀNG</p>
                 <hr className="w-20 mx-auto" />
                 {/* Cart Item */}
-                <div className="my-5 flex justify-between items-center">
-                  <div className="w-1/3 h-15">
-                    <img src={"../../../public/SABRINA+2+EP.png"} alt="Item" />
+                {cart.map((item: ICartItem) => (
+                  <div
+                    key={item.id}
+                    className="my-5 flex justify-between items-center"
+                  >
+                    <div className="w-1/3 h-15">
+                      <img src={item.imageUrl} alt={item.name} />
+                    </div>
+                    <div className="w-2/4">
+                      <p className="text-xs text-gray-600">{item.name}</p>
+                      <p className="flex text-[10px]">
+                        <span>{item.quantity} x</span>
+                        <span className="text-red-800">
+                          {(item.price * item.quantity).toLocaleString()} VNĐ
+                        </span>
+                      </p>
+                    </div>
+                    <div className="w-1/12">
+                      <i className="fa-regular fa-trash-can"></i>
+                    </div>
                   </div>
-                  <div className="w-2/4">
-                    <p className="text-xs text-gray-600">Sabrina 2 EP</p>
-                    <p className="flex text-[10px]">
-                      <span>1 x</span>
-                      <span className="text-red-800">1,250,000 VNĐ</span>
-                    </p>
-                  </div>
-                  <div className="w-1/12">
-                    <i className="fa-regular fa-trash-can"></i>
-                  </div>
-                </div>
+                ))}
                 <div>
                   <hr />
                   <div className="my-8 text-xs text-start">
@@ -197,18 +222,21 @@ const HeaderPage = () => {
                       <span>TỔNG:</span>
                       <span className="text-red-800">1,250,000 VNĐ</span>
                     </p>
-                    <Link to={""}>
-                      <button className="text-white text-[13px] mt-5 bg-black w-full h-12">XEM GIỎI HÀNG</button>
+                    <Link to={`/cart`}>
+                      <button className="text-white text-[13px] mt-5 bg-black w-full h-12">
+                        XEM GIỎI HÀNG
+                      </button>
                     </Link>
                     <Link to={""}>
-                      <button className="text-white text-[13px] mt-2 bg-red-800 w-full h-12">THANH TOÁN</button>
+                      <button className="text-white text-[13px] mt-2 bg-red-800 w-full h-12">
+                        THANH TOÁN
+                      </button>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
       <div className={`${isMenu ? "" : "invisible"} lg:visible `}>
@@ -244,47 +272,45 @@ const HeaderPage = () => {
                   GIỚI THIỆU
                 </li>
               </Link>
-              <Link to={""}>
+              <Link to={"/shoes"}>
                 <li className="border-t-2 border-gray-50-500 lg:border-t-0 lg:px-5 lg:py-4 hover:lg:text-red-950 ">
                   GIÀY
                 </li>
               </Link>
-              <Link to={""}>
+              <Link to={"/tshirt"}>
                 <li className="border-t-2 border-gray-50-500 lg:border-t-0 lg:px-5 lg:py-4 hover:lg:text-red-950 ">
                   QUẦN ÁO
                 </li>
               </Link>
-              <Link to={""}>
-                <li className="border-t-2 border-gray-50-500 lg:border-t-0 lg:px-5 lg:py-4 hover:lg:text-red-950 ">
-                  <div
-                    onClick={toggleDowMenuNam}
-                    className="cursor-pointer flex justify-between mainHover"
-                  >
-                    <span>PHỤ KIỆN</span>
-                    <span className="lg:text-[14px] lg:mx-1">
-                      <i className="fa-solid fa-chevron-down"></i>
-                    </span>
-                  </div>
-                  <ul
-                    className={`${
-                      isDowMenuNam ? "block" : "hidden"
-                    } px-2 lg:absolute lg:h-auto lg:bg-white lg:lg:shadow-xl lg:px-6 lg:text-[#353535] lg:leading-[3] lg:top-[50px] lg:left-[56%] hovermenu`}
-                  >
-                    <Link to={""}>
-                      <li className="hover:mx-auto">Classic</li>
-                    </Link>
-                    <Link to={""}>
-                      <li>One star</li>
-                    </Link>
-                    <Link to={""}>
-                      <li>Chuck 07s</li>
-                    </Link>
-                    <Link to={""}>
-                      <li>Sunbaked</li>
-                    </Link>
-                  </ul>
-                </li>
-              </Link>
+              <li className="border-t-2 border-gray-50-500 lg:border-t-0 lg:px-5 lg:py-4 hover:lg:text-red-950 ">
+                <div
+                  onClick={toggleDowMenuNam}
+                  className="cursor-pointer flex justify-between mainHover"
+                >
+                  <span>PHỤ KIỆN</span>
+                  <span className="lg:text-[14px] lg:mx-1">
+                    <i className="fa-solid fa-chevron-down"></i>
+                  </span>
+                </div>
+                <ul
+                  className={`${
+                    isDowMenuNam ? "block" : "hidden"
+                  } px-2 lg:absolute lg:h-auto lg:bg-white lg:lg:shadow-xl lg:px-6 lg:text-[#353535] lg:leading-[3] lg:top-[50px] lg:left-[56%] hovermenu`}
+                >
+                  <Link to={""}>
+                    <li className="hover:mx-auto">Classic</li>
+                  </Link>
+                  <Link to={""}>
+                    <li>One star</li>
+                  </Link>
+                  <Link to={""}>
+                    <li>Chuck 07s</li>
+                  </Link>
+                  <Link to={""}>
+                    <li>Sunbaked</li>
+                  </Link>
+                </ul>
+              </li>
 
               <Link to={"/content"}>
                 <li className="border-t-2 border-gray-50-500 lg:border-t-0 lg:px-5 lg:py-4 hover:lg:text-red-950 ">

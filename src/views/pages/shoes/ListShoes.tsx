@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ProductCT } from "../../../context/ProductContext";
 import { Link } from "react-router-dom";
 
-const ListProducts: React.FC = () => {
+const ListShoes: React.FC = () => {
   const productContext = useContext(ProductCT);
 
   if (!productContext) {
@@ -15,23 +15,31 @@ const ListProducts: React.FC = () => {
     return <div>Loading...</div>;
   }
 
+  const itemsPerPage = 20;
+  const [currentPage, setCurrentPage] = useState(1);
+
   const newProducts = products
     .filter((product) => product.isActive && product.category === "Sneakers")
-    .sort(
-      (a, b) =>
-        new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime()
-    )
-    .sort((a, b) => b.quantity - a.quantity)
-    .slice(0, 4);
+    .sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime())
+    .sort((a, b) => b.quantity - a.quantity);
+
+  const totalPages = Math.ceil(newProducts.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const paginatedProducts = newProducts.slice(startIndex, startIndex + itemsPerPage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  };
 
   return (
     <div className="w-full">
-      <div className="mt-16 mx-3 lg:md:text-center lg:md:mx-0">
+      <div className="mt-[90px] lg:mt-[160px] mx-3 lg:md:mx-0">
         <h2 className="font-protest-strike relative font-normal text-4xl">
-          SẢN PHẨM NỔI BẬT
-          <span className="text-lg absolute top-2 left-[298px] lg:md:hidden">
-            <i className="fa-solid fa-caret-right bottom-11"></i>
-          </span>
+          SẢN PHẨM GIÀY
         </h2>
 
         <div className="relative">
@@ -39,18 +47,13 @@ const ListProducts: React.FC = () => {
             Sản phẩn được phân phối chính hãng tại{" "}
             <span className="font-semibold">MONA SNE✭KER</span>
           </p>
-          <Link to={""}>
-            <div className=" absolute right-0 top-1 max-sm:hidden">
-              Xem thêm <i className="text-xs fa-solid fa-angle-right"></i>
-            </div>
-          </Link>
         </div>
       </div>
 
-      <div className="my-5 grid grid-cols-2 lg:grid-cols-4 gap-1 lg:md:gap-2 md:grid-cols-2 md:mt-5 md:mx-0">
-        {newProducts.map((product, index) => (
-          <Link to={`/product/${product.id}`}>
-            <div key={index} className="relative mx-2 md:mx-0 overflow-hidden">
+      <div className="my-5 grid grid-cols-2 lg:grid-cols-4 md:mb-20 gap-1 lg:md:gap-2 md:grid-cols-2 md:mt-5 md:mx-0">
+        {paginatedProducts.map((product, index) => (
+          <Link to={`/product/${product.id}`} key={index}>
+            <div className="relative mx-2 my-3 md:mx-0 overflow-hidden">
               <div className="w-full h-auto">
                 {product.sale && (
                   <div className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
@@ -102,11 +105,29 @@ const ListProducts: React.FC = () => {
           </Link>
         ))}
       </div>
-      <p className="text-center text-sm text-gray-400 text-decoration lg:md:hidden">
-        Xem thêm
-      </p>
+
+      {/* Conditional rendering for pagination */}
+      {newProducts.length > itemsPerPage && (
+        <div className="flex justify-center items-center my-9">
+          <button
+            onClick={handlePrevPage}
+            disabled={currentPage === 1}
+            className="px-4 py-2 mx-2 bg-gray-300 rounded hover:bg-gray-400 disabled:bg-gray-200"
+          >
+            Trước
+          </button>
+          <span className="text-sm">Trang {currentPage} / {totalPages}</span>
+          <button
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+            className="px-4 py-2 mx-2 bg-gray-300 rounded hover:bg-gray-400 disabled:bg-gray-200"
+          >
+            Sau
+          </button>
+        </div>
+      )}
     </div>
   );
 };
 
-export default ListProducts;
+export default ListShoes;
