@@ -8,7 +8,7 @@ const HeaderPage = () => {
   const [isMenu, setIsMenu] = useState(false);
   const [isDowMenuNam, setisDowMenuNam] = useState(false);
   const [isUser, setisisUser] = useState(false);
-  const { cart, getTotalPrice, removeItemFromCart } = useCart();
+  const { cart, getTotalPrice, removeItem, updateQuantity } = useCart();
 
   const toggleCart = () => {
     setIsCartVisible(!isCartVisible);
@@ -26,13 +26,12 @@ const HeaderPage = () => {
     setisisUser(!isUser);
   };
 
-  const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
-  const totalAmount = getTotalPrice(); // Total price of the cart
-
-  // Xóa sản phẩm khỏi giỏ hàng
-  const handleRemoveItem = (id: string | number) => {
-    removeItemFromCart(id);
+  const handleRemove = (id: string | number, color: string, size: string) => {
+    // Calls removeItem to delete the entire product from the cart
+    removeItem(id, color, size);
   };
+
+
   return (
     <div className=" ">
       <div
@@ -133,13 +132,13 @@ const HeaderPage = () => {
           {/* tài khoản */}
           <div className="hidden lg:block text-[#ffffffcc]  font-semibold	text-sm	relative lg:w-[25%]">
             <div onClick={toggleUser} className="cursor-pointer">
-              <Link to={""}>
+              
                 <span>ĐĂNG NHẬP</span>
-              </Link>
+              
               <span> / </span>
-              <Link to={""}>
+              
                 <span>ĐĂNG KÝ</span>
-              </Link>
+              
             </div>
           </div>
           {/* logo */}
@@ -192,7 +191,6 @@ const HeaderPage = () => {
               <div className="w-5/6 mx-auto">
                 <p className="p-5 text-[15px] font-medium">GIỎ HÀNG</p>
                 <hr className="w-20 mx-auto" />
-                {/* Cart Item */}
                 {cart.map((item: ICartItem) => (
                   <div
                     key={item.id}
@@ -202,15 +200,15 @@ const HeaderPage = () => {
                       <img src={item.imageUrl} alt={item.name} />
                     </div>
                     <div className="w-2/4">
-                      <p className="text-xs text-gray-600">{item.name}</p>
+                      <p className="text-xs text-left text-gray-600">{item.name}</p>
                       <p className="flex text-[10px]">
                         <span>{item.quantity} x</span>
                         <span className="text-red-800">
-                          {(item.price * item.quantity).toLocaleString()} VNĐ
+                           {item.totalPrice} VNĐ
                         </span>
                       </p>
                     </div>
-                    <div className="w-1/12">
+                    <div onClick={() => handleRemove(item.id, item.color, item.size)} className="w-1/12">
                       <i className="fa-regular fa-trash-can"></i>
                     </div>
                   </div>
@@ -220,18 +218,14 @@ const HeaderPage = () => {
                   <div className="my-8 text-xs text-start">
                     <p className="flex justify-between">
                       <span>TỔNG:</span>
-                      <span className="text-red-800">1,250,000 VNĐ</span>
+                      <span className="text-red-800">{getTotalPrice().toLocaleString()} VNĐ</span>
                     </p>
                     <Link to={`/cart`}>
                       <button className="text-white text-[13px] mt-5 bg-black w-full h-12">
                         XEM GIỎI HÀNG
                       </button>
                     </Link>
-                    <Link to={""}>
-                      <button className="text-white text-[13px] mt-2 bg-red-800 w-full h-12">
-                        THANH TOÁN
-                      </button>
-                    </Link>
+                    
                   </div>
                 </div>
               </div>

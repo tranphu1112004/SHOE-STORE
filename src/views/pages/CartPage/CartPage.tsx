@@ -1,55 +1,85 @@
 import React from 'react';
 import { useCart } from '../../../context/CartContext';
+import BestSellingProducts from '../Home/bestSellingProducts';
 
-const CartPage: React.FC = () => {
-    const { cart, removeFromCart, updateQuantity, getTotalPrice } = useCart();
+const CartPage = () => {
+  const { cart, getTotalPrice, removeItem, updateQuantity } = useCart();
 
-    return (
-        <div className="container mx-auto p-6 mt-32">
-            <h2 className="text-3xl font-bold mb-6">Giỏ hàng</h2>
-            <div className="flex flex-col md:flex-row">
-                {/* Cart Items */}
-                <div className="w-full md:w-3/5">
-                    {cart.map((item) => (
-                        <div key={item.product.id} className="flex items-center justify-between p-4 border-b">
-                            <img src={item.product.imageUrls[0]} alt={item.product.name} className="w-24 h-24" />
-                            <div className="flex-1 ml-4">
-                                <h3 className="text-xl font-semibold">{item.product.name}</h3>
-                                <p>Size: {item.product.sizes[0]}</p>
-                                <p>Price: {item.product.price.toLocaleString()}₫</p>
-                            </div>
-                            <div className="flex items-center">
-                                <button onClick={() => updateQuantity(item.product.id, item.quantity - 1)}>-</button>
-                                <span className="mx-2">{item.quantity}</span>
-                                <button onClick={() => updateQuantity(item.product.id, item.quantity + 1)}>+</button>
-                            </div>
-                            <button onClick={() => removeFromCart(item.product.id)} className="text-red-500 ml-4">Remove</button>
-                        </div>
-                    ))}
-                </div>
+  const handleRemove = (id, color, size) => {
+    removeItem(id, color, size);
+  };
 
-                {/* Summary */}
-                <div className="w-full md:w-2/5 p-6 bg-gray-100 rounded-lg">
-                    <h3 className="text-2xl font-semibold mb-4">Hoá đơn</h3>
-                    <div className="flex justify-between mb-2">
-                        <span>Subtotal</span>
-                        <span>{getTotalPrice().toLocaleString()}₫</span>
+  const handleQuantityChange = (id, color, size, quantity) => {
+    updateQuantity(id, color, size, quantity);
+  };
+
+  return (
+    <div>
+
+        <div className="container mx-auto p-4 mt-40 flex">
+          {/* Cart Items Section */}
+          <div className="w-2/3 pr-8">
+            <h2 className="text-2xl font-bold mb-4">Giỏ hàng</h2>
+            <ul>
+              {cart.map((item) => (
+                <li key={`${item.id}-${item.color}-${item.size}`} className="flex items-center mb-6">
+                  <img src={item.imageUrl} alt={item.name} className="w-24 h-28 mr-4" />
+                  <div className="flex flex-col flex-grow">
+                    <h3 className="text-lg font-semibold">{item.name}</h3>
+                    <p className="text-gray-500">Size: {item.size}</p>
+                    <div className="flex items-center mt-2">
+                      <button
+                        onClick={() => handleRemove(item.id, item.color, item.size)}
+                        className="text-gray-500 hover:text-red-600 mr-4"
+                      >
+                        <i className="fas fa-trash"></i>
+                      </button>
+                      <button
+                        onClick={() => handleQuantityChange(item.id, item.color, item.size, item.quantity - 1)}
+                        className="px-2"
+                      >
+                        -
+                      </button>
+                      <span className="px-4">{item.quantity}</span>
+                      <button
+                        onClick={() => handleQuantityChange(item.id, item.color, item.size, item.quantity + 1)}
+                        className="px-2"
+                      >
+                        +
+                      </button>
                     </div>
-                    <div className="flex justify-between mb-4">
-                        <span>Chi phí vận chuyển</span>
-                        <span>100,000₫</span>
-                    </div>
-                    <hr />
-                    <div className="flex justify-between font-bold text-lg mt-4">
-                        <span>Thanh toán</span>
-                        <span>{(getTotalPrice() + 250000).toLocaleString()}₫</span>
-                    </div>
-                    <button className="w-full bg-black text-white py-3 mt-6 rounded-lg">Thanh Toán</button>
-                    <button className="w-full border border-gray-400 text-gray-900 py-3 mt-2 rounded-lg">Member Checkout</button>
-                </div>
+                  </div>
+                  <p className="text-lg font-semibold ml-auto">{item.price} VNĐ</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+    
+          {/* Summary Section */}
+          <div className="w-1/3">
+            <h2 className="text-2xl font-bold mb-4">Hoá đơn</h2>
+            <div className="border-b pb-4 mb-4">
+              <div className="flex justify-between mb-2">
+                <span>Tạm tính</span>
+                <span>{getTotalPrice()} VNĐ</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Chi phí vận chuyển</span>
+                <span>30,000 VNĐ</span>
+              </div>
             </div>
+            <div className="flex justify-between text-lg font-semibold mb-8">
+              <span>Số tiền phải thanh toán</span>
+              <span>{getTotalPrice() + 30000} VNĐ</span>
+            </div>
+            <button className="w-full bg-black text-white py-2 rounded-full mb-4 hover:bg-gray-800">
+              Thanh toán
+            </button>
+          </div>
         </div>
-    );
+          <BestSellingProducts/>
+    </div>
+  );
 };
 
 export default CartPage;

@@ -1,4 +1,3 @@
-
 import React, { useContext, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ProductCT } from '../../../context/ProductContext';
@@ -9,7 +8,7 @@ import { CategoryCT } from '../../../context/CategoryContext';
 import NewProduct from '../Home/NewProduct';
 import Notification from '../Notification';
 import { IProduct } from '../../../interfaces/IProduct';
-import { useCart } from '../../../context/CartContext'; // Import the CartContext
+import { useCart } from '../../../context/CartContext';
 
 const ProductDetailUser: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,13 +17,14 @@ const ProductDetailUser: React.FC = () => {
   const { sizes } = useContext(SizeCT)!;
   const { brands } = useContext(BrandCT)!;
   const { categories } = useContext(CategoryCT)!;
-  const { addToCart } = useCart(); // Use CartContext to access addToCart function
-  const navigate = useNavigate(); // Replace useHistory with useNavigate
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [notification, setNotification] = useState<string | null>(null);
+  const [quantity, setQuantity] = useState(1); // State for quantity selection
 
   const product = products.find((p: IProduct) => p.id === id || p.id === Number(id));
   if (!product) {
@@ -58,19 +58,29 @@ const ProductDetailUser: React.FC = () => {
       return;
     }
 
-    // Add selected product to the cart
-    addToCart(product, 1);
+    const cartItem = {
+      id: product.id,
+      name: product.name,
+      price: product.sale ? product.pricenew : product.price,
+      color: selectedColor,
+      size: selectedSize,
+      quantity: quantity, // Use selected quantity
+      imageUrl: product.imageUrls[0],
+    };
 
-    // Set notification and navigate to cart page
+    addToCart(cartItem);
     setNotification(`Đã thêm vào giỏ hàng: ${product.name}, Màu: ${selectedColor}, Kích cỡ: ${selectedSize}`);
+  };
+
+  const handleBuyNow = () => {
+    handleAddToCart(); // Add the product to the cart
     setTimeout(() => {
-      navigate(''); // Redirect to the cart page after showing the notification
-    }, 1000); // Optional: delay to allow user to see notification
+      navigate('/cart'); // Redirect to the cart page after adding
+    }, 1000);
   };
 
   return (
     <div className="mt-20 max-w-6xl mx-auto p-6 rounded-lg md:mt-40">
-      {/* Product Details Content */}
       <div className="flex flex-col md:flex-row">
         <div className="flex flex-col items-center space-y-4 md:w-1/2">
           <div className="w-full h-96 flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
@@ -134,6 +144,18 @@ const ProductDetailUser: React.FC = () => {
             </div>
 
             <p className="text-lg font-semibold">Tồn kho: {product.stock}</p>
+
+            <div className="flex items-center space-x-2">
+              <label className="text-lg font-semibold">Số lượng:</label>
+              <input
+                type="number"
+                value={quantity}
+                onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
+                className="border p-2 rounded-md w-16"
+                min="1"
+                max={product.stock}
+              />
+            </div>
           </div>
 
           <div className="flex space-x-4 mt-4">
@@ -143,7 +165,12 @@ const ProductDetailUser: React.FC = () => {
             >
               Thêm vào giỏ hàng
             </button>
-            <button className="w-full border border-gray-400 text-gray-900 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition duration-200">Mua ngay</button>
+            <button
+              onClick={handleBuyNow}
+              className="w-full border border-gray-400 text-gray-900 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition duration-200"
+            >
+              Mua ngay
+            </button>
           </div>
         </div>
       </div>
@@ -159,12 +186,13 @@ const ProductDetailUser: React.FC = () => {
             </div>
           ))
         ) : (
-          <p className="text-gray-600">Chưa có đánh giá nào.</p>
+          <p className="text-gray-600">Chưa có đánh giá</p>
         )}
       </div>
-      <NewProduct />
-
-      {notification && <Notification message={notification} onClose={() => setNotification(null)} />}
+<NewProduct/>
+      {notification && (
+        <Notification message={notification} onClose={() => setNotification(null)} />
+      )}
     </div>
   );
 };
