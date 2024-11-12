@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from 'react';
 import { FormType, IProduct } from '../interfaces/IProduct';
 import { AddProduct, DeleteProduct, GetAllProducts, UpdateProduct } from '../service/Product';
 import { useNavigate } from 'react-router-dom';
-import ToastNotification from '../components/Admin/ToastNotification'; // Import toast notification
+import ToastNotification from '../components/Admin/ToastNotification'; 
 
 interface IProductContext {
     products: IProduct[];
@@ -19,7 +19,7 @@ const ProductContext: React.FC<{ children: React.ReactNode }> = ({ children }) =
     const [products, setProducts] = useState<IProduct[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
-    const [notification, setNotification] = useState<string | null>(null); // State cho thông báo
+    const [notification, setNotification] = useState<string | null>(null); 
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -47,7 +47,7 @@ const ProductContext: React.FC<{ children: React.ReactNode }> = ({ children }) =
         try {
             await DeleteProduct(id);
             setProducts(products.filter(product => product.id !== id));
-            setNotification('Xóa sản phẩm thành công'); // Cập nhật thông báo
+            setNotification('Xóa sản phẩm thành công');
         } catch (error) {
             setNotification('Lỗi khi xóa sản phẩm');
             console.error('Lỗi khi xóa sản phẩm:', error);
@@ -58,7 +58,7 @@ const ProductContext: React.FC<{ children: React.ReactNode }> = ({ children }) =
         try {
             const updatedProduct = await UpdateProduct(id, product);
             setProducts(products.map(p => (p.id === id ? updatedProduct : p)));
-            setNotification('Cập nhật sản phẩm thành công'); // Cập nhật thông báo
+            setNotification('Cập nhật sản phẩm thành công');
             navigate('/admin/products');
         } catch (error) {
             setNotification('Lỗi khi cập nhật sản phẩm');
@@ -70,7 +70,7 @@ const ProductContext: React.FC<{ children: React.ReactNode }> = ({ children }) =
         try {
             const newProduct = await AddProduct(product);
             setProducts([...products, newProduct]);
-            setNotification('Thêm sản phẩm thành công'); // Cập nhật thông báo
+            setNotification('Thêm sản phẩm thành công');
             navigate('/admin/products');
         } catch (error) {
             setNotification('Lỗi khi thêm sản phẩm');

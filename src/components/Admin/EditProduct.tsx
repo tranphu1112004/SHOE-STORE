@@ -25,7 +25,7 @@ const EditProduct: React.FC = () => {
         const product = products.find(p => p.id === id);
         if (product) {
             setFormData(product);
-            setImageUrls(product.imageUrls); // Set initial image URLs from the product
+            setImageUrls(product.imageUrls); 
         } else {
             navigate('/admin/products');
         }

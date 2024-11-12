@@ -57,7 +57,7 @@ export const UserProvider = ({ children }: UserProviderProps) => {
     try {
         const response = await FetchUserById(id);
         if (response) {
-            return response; // Nếu tìm thấy người dùng
+            return response; 
         } else {
             console.log('Không tìm thấy người dùng')
         }

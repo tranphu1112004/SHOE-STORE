@@ -6,7 +6,6 @@ type Props = {
     children: React.ReactNode;
 };
 
-// Define the context type
 interface ICategoryContext {
     categories: ICategory[];
     onAddCategory: (name: string) => Promise<void>;
@@ -14,7 +13,6 @@ interface ICategoryContext {
     onDeleteCategory: (id: string) => Promise<void>;
 }
 
-// Create the context with the default value
 export const CategoryCT = createContext<ICategoryContext | undefined>(undefined);
 
 const CategoryContext: React.FC<Props> = ({ children }) => {

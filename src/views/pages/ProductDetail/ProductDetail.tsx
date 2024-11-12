@@ -24,7 +24,7 @@ const ProductDetailUser: React.FC = () => {
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [notification, setNotification] = useState<string | null>(null);
-  const [quantity, setQuantity] = useState(1); // State for quantity selection
+  const [quantity, setQuantity] = useState(1);
 
   const product = products.find((p: IProduct) => p.id === id || p.id === Number(id));
   if (!product) {
@@ -64,7 +64,7 @@ const ProductDetailUser: React.FC = () => {
       price: product.sale ? product.pricenew : product.price,
       color: selectedColor,
       size: selectedSize,
-      quantity: quantity, // Use selected quantity
+      quantity: quantity, 
       imageUrl: product.imageUrls[0],
     };
 
@@ -73,9 +73,9 @@ const ProductDetailUser: React.FC = () => {
   };
 
   const handleBuyNow = () => {
-    handleAddToCart(); // Add the product to the cart
+    handleAddToCart(); 
     setTimeout(() => {
-      navigate('/cart'); // Redirect to the cart page after adding
+      navigate('/cart');
     }, 1000);
   };
 

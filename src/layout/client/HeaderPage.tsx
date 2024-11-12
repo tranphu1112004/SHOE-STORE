@@ -27,7 +27,6 @@ const HeaderPage = () => {
   };
 
   const handleRemove = (id: string | number, color: string, size: string) => {
-    // Calls removeItem to delete the entire product from the cart
     removeItem(id, color, size);
   };
 
@@ -118,7 +117,6 @@ const HeaderPage = () => {
           </div>
         </div>
       </div>
-      {/* top */}
       <div className=" w-full py-3 bg-black text-xl	">
         <div className="flex justify-between items-center px-7 lg:px-0 lg:w-4/5 lg:mx-auto">
           <div
@@ -129,7 +127,6 @@ const HeaderPage = () => {
               <i className="fa-solid fa-bars"></i>
             </span>
           </div>
-          {/* tài khoản */}
           <div className="hidden lg:block text-[#ffffffcc]  font-semibold	text-sm	relative lg:w-[25%]">
             <div onClick={toggleUser} className="cursor-pointer">
               
@@ -141,7 +138,6 @@ const HeaderPage = () => {
               
             </div>
           </div>
-          {/* logo */}
           <div className="ms:w-4/6 lg:w-56">
             <img
               src={"/public/logo-mona.png"}
@@ -149,10 +145,8 @@ const HeaderPage = () => {
               alt=""
             />
           </div>
-          {/* tìm kiếm / giỏ hàng */}
           <div className="relative lg:w-[25%]">
             <div className=" flex text-[#ffffffcc] font-semibold text-base 	lg:text-sm lg:float-right">
-              {/* tìm kiếm  */}
               <span className="hidden lg:block">
                 <span>
                   <i className="fa-solid fa-magnifying-glass"></i>
@@ -181,7 +175,6 @@ const HeaderPage = () => {
             } w-full h-lvh backdrop-opacity-10 z-10 backdrop-invert bg-black/30 absolute text-center right-0 top-0 lg:top-1/2 lg:right-[7%] lg:h-auto lg:w-1/5`}
           >
             <div className="absolute w-3/5 bg-white right-0 top-0 h-full lg:w-full lg:h-auto shadow-2xl">
-              {/* Cart Contents */}
               <p
                 onClick={toggleCart}
                 className="absolute top-1 right-3 text-gray-400 lg:hidden"

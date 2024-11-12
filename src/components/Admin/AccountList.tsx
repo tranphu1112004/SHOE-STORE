@@ -10,7 +10,7 @@ const AccountList = () => {
         password: '',
         email: '',
         address: '',
-        role: '1', // Mặc định là người dùng
+        role: '1', 
         phone: '',
         dateCreated: new Date(),
         IdVoucher: [],

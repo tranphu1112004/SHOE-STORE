@@ -33,11 +33,11 @@ export const ContactProvider: React.FC<{ children: ReactNode }> = ({ children })
             if (!response) {
                 throw new Error('Failed to submit');
             }
-            return true; // Trả về true nếu thành công
+            return true; 
         } catch (error) {
             console.error(error);
             setError('Failed to submit the contact form.');
-            return false; // Trả về false nếu có lỗi
+            return false;
         } finally {
             setLoading(false);
         }

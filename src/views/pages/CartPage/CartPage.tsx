@@ -17,7 +17,6 @@ const CartPage = () => {
     <div>
 
         <div className="container mx-auto p-4 mt-40 flex">
-          {/* Cart Items Section */}
           <div className="w-2/3 pr-8">
             <h2 className="text-2xl font-bold mb-4">Giỏ hàng</h2>
             <ul>
@@ -55,7 +54,6 @@ const CartPage = () => {
             </ul>
           </div>
     
-          {/* Summary Section */}
           <div className="w-1/3">
             <h2 className="text-2xl font-bold mb-4">Hoá đơn</h2>
             <div className="border-b pb-4 mb-4">

@@ -31,11 +31,11 @@ const ListProduct: React.FC = () => {
                 ...product,
                 isActive: !product.isActive
             },
-            product.id // Truyền ID của sản phẩm dưới dạng tham số thứ hai
+            product.id 
         );
     };
 
-    // Lọc các sản phẩm để chỉ hiển thị các sản phẩm đang hoạt động
+
     const activeProducts = products.filter(product => product.isActive);
 
     const totalPages = Math.ceil(activeProducts.length / PRODUCTS_PER_PAGE);

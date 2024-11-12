@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { IContent } from '../interfaces/IContent';
 import { AddContent, DeleteContent, GetAllContent, UpdateContent } from '../service/Content';
-import ToastNotification from '../components/Admin/ToastNotification'; // Assuming you have a toast notification component
+import ToastNotification from '../components/Admin/ToastNotification'; 
 import { useNavigate } from 'react-router-dom';
 
 interface IContentContext {
